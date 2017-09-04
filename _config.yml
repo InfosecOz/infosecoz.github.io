@@ -2,21 +2,21 @@
 title: InfosecOz
 brief-intro: 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://aidenatt.github.io" # the base hostname & protocol for your site
+url: "https://infosecoz.github.io" # the base hostname & protocol for your site
 
 permalink: /:day/:month/:year/:title/
 
 # other links
-twitter_username: aidenatt
+twitter_username: infosecoz
 facebook_username:
-github_username: aidenatt
+github_username: https://github.com/infosecoz
 email: contact@aidenatt.com
 linkedIn_username:
 dribbble_username:
 
 description_footer:
 
-disqus_shortname: aidenatt-github-io
+disqus_shortname: infosecoz
 
 google_analytics_id:
 
