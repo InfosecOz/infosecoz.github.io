@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 
 html { height: 100%; }
 
-body { font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif; color: #333; background-image: url(../images/line-tile.png); position: relative; min-height: 100%; padding-bottom: 190px; }
+body { font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif; color: #333; background-image: url(../images/bg.png); position: relative; min-height: 100%; padding-bottom: 190px; }
 
 a { text-decoration: none; }
 
@@ -96,7 +96,7 @@ header .wrapper nav ul li > .active { color: #fff; background-color: #000; }
 .clearfix { *zoom: 1; }
 
 .page { width: 1140px; box-sizing: border-box; margin: 0 auto; }
-.page .left { width: 75%; float: left; padding: 20px 30px; line-height: 1.6; font-size: 16px; background-color: #f8f8fd; /* box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset;*/ }
+.page .left { width: 75%; float: left; padding: 20px 30px; line-height: 1.6; font-size: 16px; background-color: #ffffff; /* box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset;*/ }
 .page .left > h1 { margin-bottom: -10px; }
 .page .left a:not([title]) { word-break: break-all; }
 .page .left ul > h2 { margin-left: -40px; color: #6a6b6b; }
@@ -116,7 +116,7 @@ header .wrapper nav ul li > .active { color: #fff; background-color: #000; }
 .page .right { float: left; width: 25%; padding-left: 20px; top: 0; }
 .page .right .fixed { position: fixed; top: 20px; }
 .page .right .scroll-bottom { position: absolute; bottom: 190px; }
-.page .right .side { box-sizing: border-box; background-color: #f8f8fd; /*box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(10, 10, 0, 0.1) inset;*/ padding-bottom: 1px; -ms-word-break: break-all; word-break: break-all; /* Non standard for webkit */ -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; }
+.page .right .side { box-sizing: border-box; background-color: #ffffff; /*box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(10, 10, 0, 0.1) inset;*/ padding-bottom: 1px; -ms-word-break: break-all; word-break: break-all; /* Non standard for webkit */ -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; }
 .page .right .side > div { padding: 12px 15px; border-bottom: 1px solid #c0c0c0; font-size: 16px; font-weight: bold; }
 .page .right .side a { color: #4d6dad; transition: 0.5s ease; }
 .page .right .side a:hover { color: #223253; }
@@ -211,7 +211,7 @@ pre > code { margin: 0; padding: 0; font-size: 13px; color: #d1d1c9; border: non
 
 .page[index] a { color: #4d6dad; transition: 0.5s ease; }
 .page[index] a:hover { color: #223253; }
-.page[index] .left { border-radius: 3px; }
+.page[index] .left { border-radius: 3px; border: 1px solid #ddd; }
 .page[index] .left > ul { padding: 0; }
 .page[index] .left > ul > li { list-style: none; }
 .page[index] .left > ul li { color: #333; }
@@ -231,7 +231,7 @@ pre > code { margin: 0; padding: 0; font-size: 13px; color: #d1d1c9; border: non
 .page[index] .left .pagination .previous, .page[index] .left .pagination .next { font-size: 20px; padding: 0 5px; }
 .page[index] .left .pagination .page_number { padding: 0 5px; }
 .page[index] .left .pagination .disable { color: #cbcbcb; }
-.page[index] .right .wrap .side { margin-bottom: 20px; padding-bottom: 0; }
+.page[index] .right .wrap .side { border-radius: 3px; border: 1px solid #ddd; margin-bottom: 20px; padding-bottom: 0; }
 .page[index] .right .wrap .side i { margin-right: 3px; }
 .page[index] .right .wrap .side .content-ul[cate] { overflow: hidden; list-style: none; margin: 0; padding: 0; }
 .page[index] .right .wrap .side .content-ul[cate] li { font-size: 14px; }

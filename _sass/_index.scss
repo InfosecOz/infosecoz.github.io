@@ -9,6 +9,7 @@
     .left {
 
         border-radius: 3px;
+        border: 1px solid #ddd;
 
         >ul {
             padding: 0;
@@ -83,6 +84,8 @@
     .right {
         .wrap {
             .side {
+                border-radius: 3px;
+                border: 1px solid #ddd;
                 margin-bottom: 20px;
                 padding-bottom: 0;
                 i {
